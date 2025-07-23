@@ -41,12 +41,14 @@ img {
 .btn {
   color: white;
   background-color: var(--primary-color);
-  padding: 26px 50px;
+  padding: 26px;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
+  cursor: pointer;
   border-radius: 8px;
+  border: none;
 }
 
 .container {
@@ -54,9 +56,11 @@ img {
   margin: 0 auto;
 }
 
-/* Header section */
+/* =============
+Header section */
 
-/* navbar style */
+/* ==============
+navbar style */
 
 .navbar {
   display: flex;
@@ -80,7 +84,7 @@ img {
 #banner {
   display: flex;
   align-items: center;
-  margin-top: 220px;
+  margin-top: 180px;
 }
 .banner-title {
   margin-top: 50px;
@@ -95,15 +99,82 @@ img {
   margin-top: 13px;
   max-width: 500px;
   font-weight: var(--fw-normal);
+  font-family: var(--font-family);
   color: var(--text-color);
 }
 .flower-img img {
   max-width: 570px;
 }
 
-/* Media Query > responsive */
+/* Main flowers container style */
+.main {
+  margin-top: 180px;
+}
+.main-title {
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family-heading);
+  text-align: center;
+}
+.main-title span {
+  color: var(--primary-color);
+}
+.main-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: var(--fw-normal);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  text-align: center;
+}
+/* flowers card style */
+.main-flowers-cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 30px;
+  column-gap: 20px;
+}
+.flowers-card {
+  width: 270px;
+  text-align: center;
+  font-family: var(--font-family);
+  line-height: 45px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+.flowers-card:hover {
+  transform: scale(1.05);
+}
+.flowers-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card-title {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: var(--fw-medium);
+}
+.flowers-price {
+  font-size: 22px;
+  font-weight: var(--fw-bold);
+  margin-bottom: 20px;
+}
+.btn {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: rgba(253, 41, 62, 0.8);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
 
-/* mobile Device */
+/* =============
+Media Query > responsive
+ mobile Device 
+ =================*/
 
 @media (max-width: 768px) {
   .container {
@@ -123,8 +194,19 @@ img {
   }
   .banner-description {
     max-width: 100%;
+    font-size: 1.2rem;
   }
   .flower-img {
     max-width: 700px;
+  }
+  /* Flowers card */
+  .main-flowers-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-title {
+    font-size: 2.6rem;
+  }
+  .main-description {
+    font-size: 1.1rem;
   }
 }
