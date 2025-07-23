@@ -11,6 +11,8 @@
   --secondary-text-color: #000000;
 
   /* Font Family */
+  --font-family: "Inter", sans-serif;
+  --font-family-heading: "Noto Serif", serif;
 
   /* Font weight */
   --fw-normal: 400;
@@ -31,6 +33,9 @@ a {
 li {
   list-style: none;
 }
+img {
+  display: block;
+}
 
 .btn {
   color: white;
@@ -46,4 +51,48 @@ li {
 .container {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+/* Header section */
+
+/* navbar style */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+}
+.navbar img {
+  height: 50px;
+}
+.menu {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+.menu a {
+  color: var(--text-color);
+}
+
+/* Navbar style */
+#banner {
+  display: flex;
+  align-items: center;
+  margin-top: 220px;
+}
+.banner-title {
+  margin-top: 50px;
+  font-size: 4rem;
+  font-weight: var(--fw-extrabold);
+  font-family: var(--font-family-heading);
+}
+.banner-title span {
+  color: var(--primary-color);
+}
+.banner-description {
+  margin-top: 13px;
+  max-width: 500px;
+  font-weight: var(--fw-normal);
+  color: var(--text-color);
 }
