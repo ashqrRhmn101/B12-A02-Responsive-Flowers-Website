@@ -187,8 +187,47 @@ navbar style */
   transform: scale(1.05);
 }
 
-/*  */
-
+/* Plants Lover Style */
+.plants-lover {
+  display: flex;
+  gap: 90px;
+  margin-bottom: 50px;
+}
+.plants-lover-img {
+  position: relative;
+}
+.trust {
+  position: absolute;
+  top: -90px;
+  right: -100px;
+  left: 280px;
+}
+.trust img {
+}
+.plants-lover img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+.plants-lover-text {
+  margin-top: 34px;
+  max-width: 700px;
+}
+.plant-lover-title {
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--font-family-heading);
+}
+.plant-lover-description {
+}
+.plant-lover-list li {
+  list-style: disc;
+  padding: 0 39px;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-weight: var(--fw-normal);
+  color: var(--text-color);
+}
 /* latest image section */
 .latest-deals {
   margin-bottom: 180px;
@@ -339,5 +378,26 @@ Media Query > responsive
   .footer-logo {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+  /* Plants Lover*/
+  .plants-lover {
+    flex-direction: column;
+    padding: 17px;
+  }
+  .plants-lover img {
+    border-radius: 8px;
+  }
+  .plant-lover-title {
+    font-size: 1.7rem;
+  }
+  .plant-lover-list li {
+    padding: 0 0;
+    margin-left: 25px;
+    margin-top: 16px;
+    font-size: 1.01rem;
+  }
+  /* Plants Lover */
+  .trust {
+    display: none;
   }
 }
