@@ -66,12 +66,21 @@ navbar style */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px auto;
+  margin: 20px auto;
+}
+.menu li:first-child a {
+  color: black;
+  font-weight: var(--fw-bold);
+}
+.menu-card a:first-child {
+  color: black;
+  margin-top: 20px;
 }
 .navbar img {
   height: 50px;
 }
 .menu {
+  margin-top: 20px;
   display: flex;
   gap: 30px;
   font-size: 14px;
@@ -81,10 +90,14 @@ navbar style */
 }
 
 /* Navbar style */
+/* Banner style */
 #banner {
   display: flex;
   align-items: center;
   margin-top: 180px;
+}
+.banner-text {
+  max-width: 700px;
 }
 .banner-title {
   margin-top: 50px;
@@ -97,18 +110,21 @@ navbar style */
 }
 .banner-description {
   margin-top: 13px;
-  max-width: 500px;
   font-weight: var(--fw-normal);
   font-family: var(--font-family);
   color: var(--text-color);
 }
 .flower-img img {
-  max-width: 570px;
+  max-width: 100%;
 }
 
 /* Main flowers container style */
 .main {
   margin: 180px 0;
+}
+.main-title-header {
+  width: 100%;
+  text-align: center;
 }
 .main-title {
   font-size: 4rem;
@@ -178,6 +194,7 @@ navbar style */
   margin-bottom: 180px;
 }
 .latest-image-section {
+  max-width: 100%;
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -188,9 +205,12 @@ navbar style */
   color: white;
   text-align: center;
 }
+/* .offer-img{
+  max-width: 500px;
+}
 .zabo-plant {
   width: 750px;
-}
+} */
 .bloom-plant,
 .ana-plant {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -244,11 +264,16 @@ Media Query > responsive
 
 @media (max-width: 768px) {
   .container {
-    margin: 0 20px;
+    margin: 10px auto;
+  }
+  .navbar {
+    margin: 0 10px;
   }
   .menu-list {
     display: none;
   }
+
+  /* Banner */
   #banner {
     flex-direction: column-reverse;
     margin-top: 40px;
@@ -256,21 +281,24 @@ Media Query > responsive
   }
   .banner-title {
     font-size: 2rem;
-    width: 400px;
+    width: 320px;
   }
   .banner-description {
     max-width: 100%;
     font-size: 1.2rem;
   }
   .flower-img {
-    max-width: 700px;
+    max-width: 100%;
   }
   /* Flowers card */
   .main-flowers-cards {
     grid-template-columns: repeat(2, 1fr);
     width: 390px;
-    margin: 50px auto;
-    padding-right: 20px;
+    margin: 40px auto;
+  }
+  .main-title-header {
+    width: 350px;
+    margin: 0 auto;
   }
   .main-title {
     font-size: 2.6rem;
@@ -281,10 +309,11 @@ Media Query > responsive
   /* Latest  */
   .latest-image-section {
     grid-template-columns: 1fr;
-    height: auto;
+    width: 350px;
+    margin: 40px auto;
   }
   .zabo-plant {
-    width: 100%;
+    max-width: 100%;
     height: 200px;
     padding-top: 80px;
   }
@@ -296,6 +325,8 @@ Media Query > responsive
 
   /* Footer  */
   .footer-content {
+    width: 400px;
+    margin: 0 auto;
     flex-direction: column;
     font-size: 16px;
     line-height: 5px;
