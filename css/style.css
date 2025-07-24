@@ -94,7 +94,7 @@ navbar style */
 #banner {
   display: flex;
   align-items: center;
-  margin-top: 180px;
+  margin-top: 160px;
 }
 .banner-text {
   max-width: 700px;
@@ -120,7 +120,8 @@ navbar style */
 
 /* Main flowers container style */
 .main {
-  margin: 180px 0;
+  margin-top: 150px;
+  margin-bottom: 190px;
 }
 .main-title-header {
   width: 100%;
@@ -233,29 +234,25 @@ navbar style */
   margin-bottom: 180px;
 }
 .latest-image-section {
-  max-width: 100%;
+  /* max-width: 100%; */
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 30px;
-  column-gap: 20px;
+  /* column-gap: px; */
   font-family: var(--font-family-heading);
   font-weight: var(--fw-bold);
   color: white;
   text-align: center;
 }
-/* .offer-img{
-  max-width: 500px;
-}
-.zabo-plant {
-  width: 750px;
-} */
 .bloom-plant,
 .ana-plant {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../assets/deal-bloom.png);
   background-repeat: no-repeat;
   background-size: cover;
+  /* width: 60%; */
+  max-width: 360px;
   height: 200px;
   border-radius: 24px;
   padding-top: 70px;
@@ -270,6 +267,7 @@ navbar style */
     url(../assets/deal-zabo.png);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 750px;
   border-radius: 24px;
   font-size: 40px;
   padding-top: 150px;
@@ -278,11 +276,52 @@ navbar style */
   text-decoration: underline;
 }
 
+/* join section style*/
+.join-section {
+  max-width: 1440px;
+  height: 530px;
+  margin: 0 auto;
+  background: url(../assets/news-letter-bg.png) no-repeat center center;
+  display: flex;
+  align-items: center;
+}
+.join-text {
+  margin: 0 auto;
+}
+.join-section-title {
+  width: 100%;
+  padding: 0px 70px;
+  margin: 20px 0;
+  color: white;
+  font-size: 3rem;
+  font-family: var(--font-family-heading);
+  font-weight: var(--fw-bold);
+}
+.input-field {
+  display: flex;
+}
+.join-text input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  font-family: var(--font-family);
+  border-radius: 3px 0 0 3px;
+}
+.secondary-btn {
+  padding: 15px;
+  width: 30%;
+  border-radius: 0 8px 8px 0;
+}
+.secondary-btn:hover {
+  transform: none;
+}
+
 /* footer style */
 .footer-content,
 a {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
   margin-bottom: 40px;
   color: var(--text-color);
   font-weight: var(--fw-normal);
@@ -333,7 +372,7 @@ Media Query > responsive
   .main-flowers-cards {
     grid-template-columns: repeat(2, 1fr);
     width: 390px;
-    margin: 40px auto;
+    margin: 50px auto;
   }
   .main-title-header {
     width: 350px;
@@ -352,7 +391,7 @@ Media Query > responsive
     margin: 40px auto;
   }
   .zabo-plant {
-    max-width: 100%;
+    width: 100%;
     height: 200px;
     padding-top: 80px;
   }
@@ -364,7 +403,7 @@ Media Query > responsive
 
   /* Footer  */
   .footer-content {
-    width: 400px;
+    max-width: 350px;
     margin: 0 auto;
     flex-direction: column;
     font-size: 16px;
@@ -399,5 +438,12 @@ Media Query > responsive
   /* Plants Lover */
   .trust {
     display: none;
+  }
+  /* Join Section */
+  .join-section-title{
+    font-size: 1.4rem;
+  }
+  .input-field{
+    padding: 0 15px;
   }
 }
