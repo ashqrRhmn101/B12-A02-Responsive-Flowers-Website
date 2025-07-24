@@ -219,6 +219,24 @@ navbar style */
   text-decoration: underline;
 }
 
+/* footer style */
+.footer-content,
+a {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  font-weight: var(--fw-normal);
+  font-family: var(--font-family);
+}
+.footer-logo {
+  max-width: 350px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+}
 /* =============
 Media Query > responsive
  mobile Device 
@@ -271,5 +289,21 @@ Media Query > responsive
   .shop {
     font-size: 20px;
     margin: 0 auto;
+  }
+
+  /* Footer  */
+  .footer-content {
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 5px;
+  }
+  .footer-description {
+    width: 360px;
+    padding: 10px 0;
+    line-height: 20px;
+  }
+  .footer-logo {
+    max-width: 100%;
+    margin-bottom: 40px;
   }
 }
