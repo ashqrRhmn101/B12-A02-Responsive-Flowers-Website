@@ -153,7 +153,6 @@ navbar style */
   column-gap: 20px;
 }
 .flowers-card {
-  max-width: 270px;
   text-align: center;
   font-family: var(--font-family);
   line-height: 45px;
@@ -183,8 +182,7 @@ navbar style */
   transition: 0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: rgba(253, 41, 62, 0.8);
-  color: rgb(255, 255, 255);
+   background-image: linear-gradient(to right, #e74c3c, #f39c12);
   transform: scale(1.05);
 }
 
@@ -193,18 +191,31 @@ navbar style */
   display: flex;
   gap: 90px;
   margin-bottom: 50px;
-}
-.plants-lover-img {
   position: relative;
 }
 .trust {
   position: absolute;
-  top: -90px;
-  right: -100px;
-  left: 280px;
+  width: 280px;
+  top: -100px;
+  right: 0;
+  left: 230px;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
 }
-.trust img {
+.trust:hover{
+  animation-play-state: paused;
 }
+@keyframes spin {
+  0%{
+    
+  }
+  100%{
+    transform: rotate(360deg);
+    
+  }
+}
+
 .plants-lover img {
   max-width: 100%;
   height: 100%;
@@ -219,8 +230,6 @@ navbar style */
   font-weight: var(--fw-bold);
   font-family: var(--font-family-heading);
 }
-.plant-lover-description {
-}
 .plant-lover-list li {
   list-style: disc;
   padding: 0 39px;
@@ -234,12 +243,13 @@ navbar style */
   margin-bottom: 180px;
 }
 .latest-image-section {
-  /* max-width: 100%; */
+  margin: 0 auto;
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 30% 67%;
+  column-gap: 30px;
   row-gap: 30px;
-  /* column-gap: px; */
   font-family: var(--font-family-heading);
   font-weight: var(--fw-bold);
   color: white;
@@ -251,7 +261,6 @@ navbar style */
     url(../assets/deal-bloom.png);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 360px;
   height: 200px;
   border-radius: 24px;
   padding-top: 70px;
@@ -266,7 +275,9 @@ navbar style */
     url(../assets/deal-zabo.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 750px;
+  width: 100%;
+  /* height: 100%; */
+  /* width: 750px; */
   border-radius: 24px;
   font-size: 40px;
   padding-top: 150px;
@@ -440,10 +451,13 @@ Media Query > responsive
   
   /* Join Section */
   .join-section-title {
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
   .input-field {
     padding: 0 15px;
+  }
+  .secondary-btn{
+    font-size: 12px;
   }
   /* Footer  */
   .footer-content {
